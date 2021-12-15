@@ -111,20 +111,120 @@
         main .allCat #allCat1{
             display: grid;
             grid-template-columns: 50% 49%;
-            grid-gap: 10px;
             border-radius: 5px;
+            overflow: hidden;
+            position: relative;
         }
-        main .allCat #allCat1 div{
+        main .allCat #allCat1 #grid4{
             display: grid;
             grid-template-columns: 50% 49%;
             grid-gap: 10px;
         }
+        #imgtxt p{
+            /* position: relative; */
+            margin-left: 15px;
+            margin-top: 50px;
+            /* width: 100%; */
+           color: white;
+           font-size: 25px;
+           font-weight: bold;
+        }
+
+        #imgtxt span{
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            font-size: 18px;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            height: 100px;
+            width: 50%
+        }
+
         main .allCat #allCat1 img{
             border-radius: 5px;
             width: 100%;
-           position:relative;
+        }
+        main .allCat #allCat1 img{
+            -webkit-transition: 0.4s ease;
+            transition: 0.4s ease;
+        }
+        main .allCat #allCat1 img:hover{
+            -webkit-transform: scale(1.08);
+            transform: scale(1.08);
+        }
+        #imgtxt1{
+            background-image: url("https://odis.homeaway.com/odis/destination/7354b320-26d3-4fe7-8471-d940a15d9d43.hw2.jpg");
+            background-size: cover;
+            width: 100%;
+            top: 100px;
+        }
+        #imgtxt2{
+            background-image: url("https://odis.homeaway.com/odis/homepage/2a55d131-f53a-455a-8737-45038b308798.hw2.jpg");
+            background-size: cover;
+            width: 100%;
+            top: 100px;
+        }
+        #imgtxt3{
+            background-image: url("https://odis.homeaway.com/odis/destination/776c3818-9b31-4028-b702-fa1e70e6c13d.hw2.jpg");
+            background-size: cover;
+            width: 100%;
+            top: 100px;
+        }
+        #imgtxt4{
+            background-image: url("https://odis.homeaway.com/odis/destination/d7b69e76-921d-4abb-a5a3-acb2fba344de.hw2.jpg");
+            background-size: cover;
+            width: 100%;
+            top: 100px;
+        }
+        #grid4 span{
+            display: flex;
+            align-content:flex-end;
+            flex-direction:column-reverse;
+            height: 100%;
+            color: white;
+            font-size: 18px;
+        }
+        #grid4 span p{
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            height: 50px;
+            padding-left: 15px;
+           margin-bottom: 0px;
+           font-weight: 500;
+           font-size: 22px;
         }
 
+        #imgtxtbig2{
+            background-image: url("https://odis.homeaway.com/odis/destination/d7b69e76-921d-4abb-a5a3-acb2fba344de.hw2.jpg");
+            background-size: cover;
+            /* width: 100%; */
+            top: 100px;
+        }
+
+        #imgtxt5{
+            background-image: url("https://odis.homeaway.com/odis/homepage/2a55d131-f53a-455a-8737-45038b308798.hw2.jpg");
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            top: 100px;
+        }
+        #imgtxt6{
+            background-image: url("https://odis.homeaway.com/odis/homepage/2a55d131-f53a-455a-8737-45038b308798.hw2.jpg");
+            background-size: cover;
+            width: 100%;
+            top: 100px;
+        }
+        #imgtxt7{
+            background-image: url("https://odis.homeaway.com/odis/homepage/2a55d131-f53a-455a-8737-45038b308798.hw2.jpg");
+            background-size: cover;
+            width: 100%;
+            top: 100px;
+        }
+        #imgtxt8{
+            background-image: url("https://odis.homeaway.com/odis/homepage/2a55d131-f53a-455a-8737-45038b308798.hw2.jpg");
+            background-size: cover;
+            width: 100%;
+            top: 100px;
+        }
     </style>
 </head>
 <body>
@@ -170,12 +270,74 @@
             <h2>Get inspired for a family trip</h2>
             <p>Book homes with space, convenience and amenities</p>
             <div id="allCat1">
-                <img src="https://odis.homeaway.com/odis/destination/a8f63526-cf00-4610-a6c4-810d1b12cd9f.hw2.jpg" alt="">
+                <div id="imgtxt">
+                    <img src="https://odis.homeaway.com/odis/destination/a8f63526-cf00-4610-a6c4-810d1b12cd9f.hw2.jpg" alt="">
+                    <span>
+                        <p>Pets welcome</p>
+                    </span>
+                </div>
+                
+                <div id="grid4" >
+                    <div id="imgtxt1">
+                        <span>
+                            <p>Pets welcome</p>
+                        </span>
+                    </div>
+                    <div id="imgtxt2">
+                        <span>
+                            <p>Swimming pools</p>
+                        </span>
+                    </div>
+                    <div id="imgtxt3">
+                        <span>
+                            <p>Homes with free cancellation</p>
+                        </span>
+                    </div>
+                    <div id="imgtxt4">
+                        <span>
+                            <p>More than 3 bedrooms</p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <br>
+           
+            <div id="allCat1">
+                <div id="grid4" >
+                    <div id="imgtxt5">
+                        <span>
+                            <p>Pets welcome</p>
+                        </span>
+                    </div>
+                    <div id="imgtxt6">
+                        <span>
+                            <p>Swimming pools</p>
+                        </span>
+                    </div>
+                    <div id="imgtxt7">
+                        <span>
+                            <p>Homes with free cancellation</p>
+                        </span>
+                    </div>
+                    <div id="imgtxt8">
+                        <span>
+                            <p>More than 3 bedrooms</p>
+                        </span>
+                    </div>
+                </div>
+                <div id="imgtxtbig2">
+                    <span>
+                        <p>Pets welcome</p>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h2>Find spaces that suit your style</h2>
+            <div>
                 <div>
-                    <img src="https://odis.homeaway.com/odis/destination/7354b320-26d3-4fe7-8471-d940a15d9d43.hw2.jpg" alt="">
-                    <img src="https://odis.homeaway.com/odis/homepage/2a55d131-f53a-455a-8737-45038b308798.hw2.jpg" alt="">
-                    <img src="https://odis.homeaway.com/odis/destination/776c3818-9b31-4028-b702-fa1e70e6c13d.hw2.jpg" alt="">
-                    <img src="https://odis.homeaway.com/odis/destination/d7b69e76-921d-4abb-a5a3-acb2fba344de.hw2.jpg" alt="">
+                    
                 </div>
             </div>
         </div>
