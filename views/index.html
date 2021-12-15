@@ -40,39 +40,15 @@
 
         .poster{
             background-image: url("https://odis.homeaway.com/odis/homepage/39a94c43-6566-4dd7-9e26-74a3355a1a9d.hw10.jpg");
-            /* color: #292929; */
-            /* height: 300px; */
-            box-sizing: border-box;
             background-size: cover;
             height: 100%;
             position: absolute;
             width: 100%;
-            z-index: -1;
-            margin: auto;
-            /* display: block; */
-            /* position: relative; */
-            max-height: 350px;
+            max-height: 450px;
         }
 
-        .poster > #onPoster{
-            background-color: rgba(44, 44, 44, 0.11);
-            padding: 10%;
-            margin-left: 12%;
-            max-width: 1000px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-           
-           width: 100%;
-           height: 100%;
-        }
         .poster h1{
-            /* margin-left: 30%; */
            color: ivory;
-
-            padding: 0 10px;
-            width: 100%;
         }
         .search{
             background-color: rgb(238, 238, 238);
@@ -92,6 +68,17 @@
             border-radius: 25px;
             padding: 15px 35px;
         }
+        #bgclr{
+            background-color: rgba(68, 68, 68, 0.219);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
     </style>
 </head>
 <body>
@@ -110,25 +97,27 @@
     </header>
     
     <div class="poster" >
-        <div id="onPoster">
-            <h1>
-                <span>Beach house? Condo? cabin?</span>
-                <br>
-                <span>Find the perfect vacation rental</span>
-            </h1>
-            <div class="search" >
-                <form action="">
-                    <input placeholder="Search destination or property ID" type="text">
-                    <span>
-                        <input id="checkin" type="date" >
-                        <input id="checkout" type="date">
-                    </span>
-                   
-                   <input placeholder="Search" id="submitbtn" type="submit">
-                </form>
+        <div id="bgclr">
+            <div id="onPoster">
+                <h1>
+                    <span>Beach house? Condo? cabin?</span>
+                    <br>
+                    <span>Find the perfect vacation rental</span>
+                </h1>
+                <div class="search" >
+                    <form action="">
+                        <input placeholder="Search destination or property ID" type="text">
+                        <span>
+                            <input id="checkin" type="date" >
+                            <input id="checkout" type="date">
+                        </span>
+                        <input id="guests" type="number">
+                       <input placeholder="Search" id="submitbtn" type="submit">
+                    </form>
+                </div>
             </div>
         </div>
-       
+        
     </div>
     
 </body>
