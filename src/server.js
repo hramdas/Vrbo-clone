@@ -8,6 +8,9 @@ app.use(express.static("public"))
 app.get('/', (req, res)=>{
    return res.render('index.ejs', {})
 })
+app.get('/list', (req, res)=>{
+   return res.render('list.ejs', {})
+})
 
 app.listen('2000', async ()=>{
     await connect()
