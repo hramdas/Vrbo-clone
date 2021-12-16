@@ -1,0 +1,284 @@
+body{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+}
+
+header{
+    padding: 5px 10px;
+    /* border: 1px solid black; */
+}
+header .icon{
+    margin: auto;
+}
+header svg{
+    stroke-width : 1.5px;
+
+}
+header div > span{
+    text-align: center;
+    display: inline-flex;
+    margin: 5px;
+    padding: 1px 13px;
+    text-decoration: none;
+    font-weight: 500;
+}
+header div > span > button {
+    border-radius: 25px;
+    padding: 10px;
+    /* align-items: center; */
+    background-color: white;
+    font-weight: bold;
+}
+
+.poster{
+    background-image: url("https://odis.homeaway.com/odis/homepage/39a94c43-6566-4dd7-9e26-74a3355a1a9d.hw10.jpg");
+    background-size: cover;
+    /* height: auto; */
+    width: 100%;
+    height: 450px;
+    /* display: block; */
+}
+
+.poster h1{
+   color: ivory;
+   font-size: 250%;
+   -webkit-text-stroke: 0.5px rgb(0, 0, 0);
+   text-shadow: 1px 1px #000000;
+}
+div.search{
+    background-color: rgb(238, 238, 238);
+    padding: 20px;
+    border-radius: 8px;
+    /* position: -webkit-sticky; */
+    /* position: sticky;
+    top: 0; */
+}
+.search form input{
+    padding: 15px;
+    border-radius: 3px;
+    border: 1px solid black;
+    font-size: 16px;
+    width: auto;
+}
+form #submitbtn{
+    background-color: #245abc;
+    color: white;
+    border-radius: 25px;
+    padding: 15px 35px;
+}
+#bgclr{
+    background-color: rgba(2, 2, 2, 0.219);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search #destination{
+    width: 240px;
+}
+.search #guests{
+    width: 70px;
+}
+.search #txtFromDate, #txtToDate {
+    width: 80px;
+}
+.mainBody{
+    top : -40px;
+    margin: 10px 70px;
+    position: relative;
+    padding-top : 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+.mainBody .allCat{
+    margin: 0px 70px;
+}
+.mainBody .allCat #allCat1{
+    display: grid;
+    grid-template-columns: 49% 49%;
+    grid-gap: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    height: 500px;
+}
+.mainBody .allCat #allCat1 #grid4{
+    display: grid;
+    grid-template-columns: 50% 49%;
+    grid-gap: 10px;
+}
+#imgtxt{
+    background-size: cover;
+    width: 100%;
+    top: 100px;
+}
+.allCat1{
+    background-image: url("https://odis.homeaway.com/odis/destination/a8f63526-cf00-4610-a6c4-810d1b12cd9f.hw2.jpg");
+}
+.allCat2{
+    background-image: url("https://odis.homeaway.com/odis/homepage/59a42609-b55a-456b-9361-50e46843c866.hw2.jpg");
+}
+
+#imgtxt span{
+    display: flex;
+    align-content:flex-end;
+    flex-direction:column-reverse;
+    height: 100%;
+    color: white;
+    font-size: 18px;
+}
+#imgtxt span p{
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    height: auto;
+    padding: 10px 15px;
+   margin-bottom: 0px;
+   font-weight: 500;
+   font-size: 22px;
+}
+
+.mainBody .allCat #allCat1 img{
+    border-radius: 5px;
+    width: 100%;
+}
+.mainBody .allCat #allCat1 img{
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+}
+.mainBody .allCat #allCat1 img:hover{
+    -webkit-transform: scale(1.08);
+    transform: scale(1.08);
+}
+#imgtxt1{
+    background-image: url("https://odis.homeaway.com/odis/destination/7354b320-26d3-4fe7-8471-d940a15d9d43.hw2.jpg");
+    background-size: cover;
+    width: 100%;
+    top: 100px;
+}
+#imgtxt2{
+    background-image: url("https://odis.homeaway.com/odis/homepage/2a55d131-f53a-455a-8737-45038b308798.hw2.jpg");
+    background-size: cover;
+    width: 100%;
+    top: 100px;
+}
+#imgtxt3{
+    background-image: url("https://odis.homeaway.com/odis/destination/776c3818-9b31-4028-b702-fa1e70e6c13d.hw2.jpg");
+    background-size: cover;
+    width: 100%;
+    top: 100px;
+}
+#imgtxt4{
+    background-image: url("https://odis.homeaway.com/odis/destination/d7b69e76-921d-4abb-a5a3-acb2fba344de.hw2.jpg");
+    background-size: cover;
+    width: 100%;
+    top: 100px;
+}
+#grid4 span{
+    display: flex;
+    align-content:flex-end;
+    flex-direction:column-reverse;
+    height: 100%;
+    color: white;
+    font-size: 18px;
+}
+#grid4 span p{
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    height: auto;
+    padding: 10px 15px;
+   margin-bottom: 0px;
+   font-weight: 500;
+   font-size: 22px;
+}
+
+#imgtxt5{
+    background-image: url("https://odis.homeaway.com/odis/homepage/39865c5c-d47b-4bbe-8f82-dbbc33864d52.hw2.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    top: 100px;
+}
+#imgtxt6{
+    background-image: url("https://odis.homeaway.com/odis/homepage/92c0491b-38bb-423e-852c-99565f51960c.hw2.jpg");
+    background-size: cover;
+    width: 100%;
+    top: 100px;
+}
+#imgtxt7{
+    background-image: url("https://odis.homeaway.com/odis/destination/d09e5b72-2d72-4bfc-9f04-6f79c986a9c9.hw2.jpg");
+    background-size: cover;
+    width: 100%;
+    top: 100px;
+}
+#imgtxt8{
+    background-image: url("https://odis.homeaway.com/odis/destination/bdd475bd-4847-408e-893d-e428d404b2b8.hw2.jpg");
+    background-size: cover;
+    width: 100%;
+    top: 100px;
+}
+
+.spacesStyle{
+    margin: 0px 70px;
+    height: 100%;
+}
+#spacesStyle > div{
+   
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    grid-gap: 10px;
+}
+#spacesStyle > div > div img{
+    width: 100%;
+    /* height: 100%; */
+    border-radius: 5px;
+}
+
+#spacesStyle #h2{
+    font-size: larger;
+    font-weight: 600;
+}
+.listProp{
+    margin-top: -35px;
+    /* position:absolute; */
+    background-image: url("https://odis.homeaway.com/odis/homepage/1bb3a26d-9eff-45c8-815e-3890dfdd514d.hp-lyp-large.jpg");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* overflow: hidden; */
+    /* position: relatabive; */
+    width: 100%;
+    height: 500px;
+}
+.listProp > div{
+    background-color: rgba(49, 49, 49, 0.404);
+    height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.listProp > div > span{
+    margin: 0 30%;
+    text-align: center;
+    color: white;
+    font-size: 27px;
+}
+.listProp > div > button{
+    max-width: 400px;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.726);
+    font-size: larger;
+    padding: 15px;
+    border-radius: 35px;
+    border: none;
+}
+.about{
+    margin: 0px 140px;
+}
+
+footer{
+    margin: 0px 140px;
+}

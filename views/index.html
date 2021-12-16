@@ -6,226 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vrbo | Book your vacation rentals : beach houses, cabins, condos & more</title>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
-    <style>
-        body{
-            font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            margin: 0;
-        }
-
-        header{
-            padding: 5px 10px;
-            /* border: 1px solid black; */
-        }
-        header .icon{
-            margin: auto;
-        }
-        header svg{
-            stroke-width : 1.5px;
-    
-        }
-        header div > span{
-            text-align: center;
-            display: inline-flex;
-            margin: 5px;
-            padding: 1px 13px;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        header div > span > button {
-            border-radius: 25px;
-            padding: 10px;
-            /* align-items: center; */
-            background-color: white;
-            font-weight: bold;
-        }
-
-        .poster{
-            background-image: url("https://odis.homeaway.com/odis/homepage/39a94c43-6566-4dd7-9e26-74a3355a1a9d.hw10.jpg");
-            background-size: cover;
-            /* height: auto; */
-            width: 100%;
-            height: 450px;
-            /* display: block; */
-        }
-
-        .poster h1{
-           color: ivory;
-           font-size: 250%;
-           -webkit-text-stroke: 0.5px rgb(0, 0, 0);
-           text-shadow: 1px 1px #000000;
-        }
-        div.search{
-            background-color: rgb(238, 238, 238);
-            padding: 20px;
-            border-radius: 8px;
-            /* position: -webkit-sticky; */
-            /* position: sticky;
-            top: 0; */
-        }
-        .search form input{
-            padding: 15px;
-            border-radius: 3px;
-            border: 1px solid black;
-            font-size: 16px;
-            width: auto;
-        }
-        form #submitbtn{
-            background-color: #245abc;
-            color: white;
-            border-radius: 25px;
-            padding: 15px 35px;
-        }
-        #bgclr{
-            background-color: rgba(2, 2, 2, 0.219);
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .search #destination{
-            width: 240px;
-        }
-        .search #guests{
-            width: 70px;
-        }
-        .search #txtFromDate, #txtToDate {
-            width: 80px;
-        }
-        main{
-            top : -40px;
-            margin: 10px 70px;
-            position: relative;
-            padding-top : 20px;
-            background-color: white;
-            z-index: 1;
-            height: 500px;
-            border-radius: 10px;
-        }
-        main .allCat{
-            margin: 0px 70px;
-        }
-        main .allCat #allCat1{
-            display: grid;
-            grid-template-columns: 50% 49%;
-            border-radius: 5px;
-            overflow: hidden;
-            position: relative;
-        }
-        main .allCat #allCat1 #grid4{
-            display: grid;
-            grid-template-columns: 50% 49%;
-            grid-gap: 10px;
-        }
-        #imgtxt p{
-            /* position: relative; */
-            margin-left: 15px;
-            margin-top: 50px;
-            /* width: 100%; */
-           color: white;
-           font-size: 25px;
-           font-weight: bold;
-        }
-
-        #imgtxt span{
-            position: absolute;
-            bottom: 0px;
-            left: 0px;
-            font-size: 18px;
-            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-            height: 100px;
-            width: 50%
-        }
-
-        main .allCat #allCat1 img{
-            border-radius: 5px;
-            width: 100%;
-        }
-        main .allCat #allCat1 img{
-            -webkit-transition: 0.4s ease;
-            transition: 0.4s ease;
-        }
-        main .allCat #allCat1 img:hover{
-            -webkit-transform: scale(1.08);
-            transform: scale(1.08);
-        }
-        #imgtxt1{
-            background-image: url("https://odis.homeaway.com/odis/destination/7354b320-26d3-4fe7-8471-d940a15d9d43.hw2.jpg");
-            background-size: cover;
-            width: 100%;
-            top: 100px;
-        }
-        #imgtxt2{
-            background-image: url("https://odis.homeaway.com/odis/homepage/2a55d131-f53a-455a-8737-45038b308798.hw2.jpg");
-            background-size: cover;
-            width: 100%;
-            top: 100px;
-        }
-        #imgtxt3{
-            background-image: url("https://odis.homeaway.com/odis/destination/776c3818-9b31-4028-b702-fa1e70e6c13d.hw2.jpg");
-            background-size: cover;
-            width: 100%;
-            top: 100px;
-        }
-        #imgtxt4{
-            background-image: url("https://odis.homeaway.com/odis/destination/d7b69e76-921d-4abb-a5a3-acb2fba344de.hw2.jpg");
-            background-size: cover;
-            width: 100%;
-            top: 100px;
-        }
-        #grid4 span{
-            display: flex;
-            align-content:flex-end;
-            flex-direction:column-reverse;
-            height: 100%;
-            color: white;
-            font-size: 18px;
-        }
-        #grid4 span p{
-            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-            height: 50px;
-            padding-left: 15px;
-           margin-bottom: 0px;
-           font-weight: 500;
-           font-size: 22px;
-        }
-
-        #imgtxtbig2{
-            background-image: url("https://odis.homeaway.com/odis/destination/d7b69e76-921d-4abb-a5a3-acb2fba344de.hw2.jpg");
-            background-size: cover;
-            /* width: 100%; */
-            top: 100px;
-        }
-
-        #imgtxt5{
-            background-image: url("https://odis.homeaway.com/odis/homepage/2a55d131-f53a-455a-8737-45038b308798.hw2.jpg");
-            background-size: cover;
-            width: 100%;
-            height: 100%;
-            top: 100px;
-        }
-        #imgtxt6{
-            background-image: url("https://odis.homeaway.com/odis/homepage/2a55d131-f53a-455a-8737-45038b308798.hw2.jpg");
-            background-size: cover;
-            width: 100%;
-            top: 100px;
-        }
-        #imgtxt7{
-            background-image: url("https://odis.homeaway.com/odis/homepage/2a55d131-f53a-455a-8737-45038b308798.hw2.jpg");
-            background-size: cover;
-            width: 100%;
-            top: 100px;
-        }
-        #imgtxt8{
-            background-image: url("https://odis.homeaway.com/odis/homepage/2a55d131-f53a-455a-8737-45038b308798.hw2.jpg");
-            background-size: cover;
-            width: 100%;
-            top: 100px;
-        }
-    </style>
+    <link rel="stylesheet" href="/views/index.css">
+ 
 </head>
 <body>
     <header>
@@ -235,6 +17,7 @@
                 <span><svg data-id="SVG_PERSON__24" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" d="M4.129 19.685a20.558 20.558 0 0011.884 1.17 20.558 20.558 0 003.858-1.17"></path><path stroke="currentColor" d="M11.907 11.906c-.992 0-2.002.19-2.976.595a7.777 7.777 0 00-4.802 7.184M12.093 11.906a7.78 7.78 0 017.778 7.778"></path><path stroke="currentColor" d="M15.982 7.837a4.07 4.07 0 01-4.07 4.07h-.01a4.07 4.07 0 01-4.068-4.07V6.82a4.07 4.07 0 014.069-4.069h.01a4.07 4.07 0 014.069 4.07v1.017z" clip-rule="evenodd"></path></svg>Login</span>
                 
                 <span><svg data-id="SVG_INVITE__24" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" d="M17.174 14.344v5.322M14.513 17.005h5.322M4.165 19.685a20.536 20.536 0 007.871 1.565M11.944 11.906a7.735 7.735 0 00-2.976.595 7.777 7.777 0 00-4.802 7.184"></path><path stroke="currentColor" d="M16.018 7.837a4.07 4.07 0 01-4.07 4.07h-.01a4.07 4.07 0 01-4.068-4.07V6.82a4.07 4.07 0 014.069-4.069h.01a4.07 4.07 0 014.069 4.07v1.017z" clip-rule="evenodd"></path></svg> Sign up </span>
+
                 <span><svg data-id="SVG_QUESTION__24" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" fill-rule="evenodd" d="M13.02 16.747a1 1 0 11-2 0 1 1 0 012 0z" clip-rule="evenodd"></path><path stroke="currentColor" d="M2.7 12a9.3 9.3 0 1118.6 0 9.3 9.3 0 01-18.6 0z" clip-rule="evenodd"></path><path stroke="currentColor" d="M9.406 9.464a2.612 2.612 0 113.566 2.434 1.5 1.5 0 00-.953 1.397v.307"></path></svg>Help</span>
                 <span> USD($)</span>
                 <span>EN</span>
@@ -265,13 +48,13 @@
             </div>
         </div>
     </div>
-    <main class="mainBody">
+    <div class="mainBody">
         <div class="allCat" >
             <h2>Get inspired for a family trip</h2>
             <p>Book homes with space, convenience and amenities</p>
             <div id="allCat1">
-                <div id="imgtxt">
-                    <img src="https://odis.homeaway.com/odis/destination/a8f63526-cf00-4610-a6c4-810d1b12cd9f.hw2.jpg" alt="">
+                <div class="allCat1" id="imgtxt">
+                    
                     <span>
                         <p>Pets welcome</p>
                     </span>
@@ -306,42 +89,117 @@
                 <div id="grid4" >
                     <div id="imgtxt5">
                         <span>
-                            <p>Pets welcome</p>
+                            <p>Outdoor space</p>
                         </span>
                     </div>
                     <div id="imgtxt6">
                         <span>
-                            <p>Swimming pools</p>
+                            <p>On the water</p>
                         </span>
                     </div>
                     <div id="imgtxt7">
                         <span>
-                            <p>Homes with free cancellation</p>
+                            <p>Hot tubs</p>
                         </span>
                     </div>
                     <div id="imgtxt8">
                         <span>
-                            <p>More than 3 bedrooms</p>
+                            <p>Near mountains</p>
                         </span>
                     </div>
                 </div>
-                <div id="imgtxtbig2">
+                <div class="allCat2" id="imgtxt">
                     <span>
-                        <p>Pets welcome</p>
+                        <p>Cabins</p>
                     </span>
                 </div>
+
             </div>
         </div>
 
-        <div>
+        <div class="spacesStyle">
             <h2>Find spaces that suit your style</h2>
-            <div>
+            <div id="spacesStyle">
                 <div>
-                    
+                    <div>
+                        <img src="https://odis.homeaway.com/odis/destination/8621e10e-7950-41b4-814e-8817969887f4.carousel-m.jpg" alt="">
+                        <span id="h2">House</span><br>
+                        <span>View 342,285 houses</span>
+                    </div>
+                    <div>
+                        <img src="https://odis.homeaway.com/odis/destination/397eabda-51d4-45d4-82c8-da3ad409ff84.carousel-m.jpg" alt="">
+                        <span id="h2">Condos/Apartments</span><br>
+                        <span>View 212,577 condos/apartments</span>
+                    </div>
+                    <div>
+                        <img src="https://odis.homeaway.com/odis/destination/5941b1e0-2600-4b2a-b27e-c667abf7e510.carousel-m.jpg" alt="">
+                        <span id="h2">Cabins</span><br>
+                        <spanp>View 32,285 cabins</span>
+                    </div>
+                    <div>
+                        <img src="https://odis.homeaway.com/odis/destination/ae891341-b7bb-4ae2-a1f8-7c8e53d16c4e.carousel-m.jpg" alt="">
+                        <span id="h2">Studios</span> <br>
+                        <span>View 32,285 studios</span>
+                    </div>
+                    <!-- <div>
+                        <img src="https://odis.homeaway.com/odis/destination/adf45333-140a-40cf-987f-bc49b711c3d9.carousel-m.jpg" alt="">
+                        <h2>Cottages</h2>
+                        <p>View 42,205 cottages</p>
+                    </div>
+                    <div>
+                        <img src="https://odis.homeaway.com/odis/destination/9af508c6-3dd9-453f-9a0d-8726a705328d.carousel-m.jpg" alt="">
+                        <h2>Bungalows</h2>
+                        <p>View 42,205 bungalows</p>
+                    </div>
+                    <div>
+                        <img src="https://odis.homeaway.com/odis/destination/b7cb1fe3-5876-48a3-b9e4-c9b24d9f96b1.carousel-m.jpg" alt="">
+                        <h2>Townhouses</h2>
+                        <p>View 28,210 townhouses</p>
+                    </div> -->
                 </div>
             </div>
         </div>
-    </main>
+        <br>
+    </div>
+    <div class="listProp">
+            <div>
+                <span>List your property on Vrbo and open your door to rental income</span>
+                <br>
+                <button>List your property</button>
+            </div>
+    </div>
+    <br>
+    <div class="about">
+        <div>
+            <span style="font-size: 22px;  font-weight: 500;">Discover what Vrbo is all about</span>
+            <p>With over 2 million bookable vacation rentals, Vrbo connects homeowners with families and vacationers looking for something more than a hotel for their trip. The Vrbo community offers families an array of rental property types such as <span style="color : rgb(46, 46, 219); font-weight:bold;" >condos, cabins, lake rentals, beach houses,</span> and more. Discover properties in destinations that everyone dreams of visiting. All it takes is a quick Vrbo property search to securely book your next condo, cabin, or house anywhere in the world. If you're traveling with a large <span style="color : rgb(46, 46, 219); font-weight:bold;">group,</span> you can find rental homes on Vrbo that give you the space and comfort you need without sacrificing the amenities that matter most, all within your budget.</p>
+        </div>
+        <div>
+            <span style="font-size: 22px; font-weight: 500;">Here’s what makes a vacation rental perfect for you</span>
+            <p>Whether you're planning a <span style="color : rgb(46, 46, 219); font-weight:bold;" >family vacation</span> with your pet, a relaxing weekend getaway, or an adventurous excursion, vacation rentals are ideal for trips of all types. You can find everything from charming mountain cabins and lakeside lodges to breathtaking city apartments and luxury homes, or anything in between, all with an array of features to make your trip more comfortable and convenient. Staying in a vacation home, you'll enjoy amenities like extra bedrooms or a full kitchen with appliances, making it much easier to enjoy a stress-free trip with the family. You can also find vacation home rentals with additional features such as waterfront views, a private pool or hot tub, or outdoor entertainment space.</p>
+        </div>
+    </div>
+<br>
+    <footer>
+        <div id="footerIcon">
+            <img src="https://csvcus.homeaway.com/rsrcs/cdn-logos/5.8.0/sitename/vrbo/web/logo.svg" alt="">
+        </div>
+
+        <div class="footeMain">
+            <div>
+                <div>
+                    <h3>Explore Vrbo</h3>
+                    <span>List your property</span> <br>
+                    <span>Book with Confidence</span><br>
+                    <span>Partner resources</span><br>
+                    <span>Vacation rental guides</span>
+                </div>
+            </div>
+            <div>
+
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
