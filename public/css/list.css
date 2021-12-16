@@ -1,0 +1,237 @@
+body{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+}
+
+.topSticky{
+    background-color: white;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .sticky + .mainContent {
+    padding-top: 102px;
+  }
+
+header{
+    padding: 5px 10px;
+    /* border: 1px solid black; */
+    
+}
+header .icon{
+    margin: auto;
+}
+header svg{
+    stroke-width : 1.5px;
+
+}
+header div > span{
+    text-align: center;
+    display: inline-flex;
+    margin: 5px;
+    padding: 1px 13px;
+    text-decoration: none;
+    font-weight: 500;
+}
+header div > span > button {
+    border-radius: 25px;
+    padding: 10px;
+    /* align-items: center; */
+    background-color: white;
+    font-weight: bold;
+}
+.topSticky .search{
+    margin: 10px;
+}
+.topSticky .search input{
+    padding: 15px;
+    border-radius: 5px;
+}
+.search form > input{
+    border: 1px solid black;
+    font-size: 16px;
+    width: auto;
+    margin-right: 10px;
+}
+
+form #submitbtn{
+    background-color: #245abc;
+    color: white;
+    border-radius: 25px;
+    padding: 15px 35px;
+}
+#bgclr{
+    background-color: rgba(2, 2, 2, 0.219);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search #destination{
+    width: 240px;
+}
+.search #guests{
+    width: 70px;
+}
+.search #txtFromDate, #txtToDate {
+    width: 80px;
+}
+
+.search .dateSpan input{
+    border: 1px solid black;
+    font-size: 16px;
+    width: auto;
+    margin-right: -9px;
+}
+.search .dateSpan{
+    margin-right: 10px;
+}
+.mainContent{
+    margin-left: 30px;
+   
+    display: grid;
+    grid-template-columns: 55% 45%;
+    grid-gap: 2%;
+}
+.mainContent #MapImg{
+    position:fixed;
+    right: 0;
+    bottom: 0;
+   top: 150px;
+    /* display: inline; */
+    box-sizing: border-box;
+    height: 100%;
+}
+.mainContent #MapImg img{
+    width: 100%;
+   
+    object-fit: fill
+}
+
+.singleItem{
+    display: grid;
+    grid-template-columns: 38% 60%;
+    grid-gap: 2%;
+}
+.singleItem img{
+    width:100%
+}
+.singleItem #itemTitle{
+    font-size:20px;
+    font-weight: 600;
+}
+.singleItem #singleTxt{
+    display: grid;
+    grid-template-rows: auto;
+    /* grid-gap: 10px; */
+}
+
+#RatingPrice{
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+#RatingPrice span{
+    text-align: right;
+}
+#RatingPrice > p{
+    margin-bottom: 0px;
+    font-weight: 500;
+}
+#RatingPrice #pricespan{
+    font-size: larger;
+    font-weight: 500;
+}
+#RatingPrice #freeCncl{
+   font-size: 13px;
+}
+
+
+section{
+    visibility: visible;
+    position: fixed;
+    /* bottom: 0; */
+    display: block;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    z-index: 1;;
+}
+
+footer .footeMain{
+    display: grid;
+    grid-template-columns: 35% 45%;
+    grid-gap: 15%;
+}
+footer .footeMain > #footerLinks{
+    display: grid;
+    grid-template-columns: 48% 48%;
+    grid-gap: 2%;
+}
+
+.footerforms input{
+    padding: 10px;
+    width: 60%;
+    font-size: larger;
+}
+.footerforms > #email input{
+    width: 70%;
+}
+.footerforms > #phone select{
+    width: 20%;
+    padding: 10px;
+    font-size: larger;
+}
+
+.footerforms > #phone input{
+    width: 50%;
+}
+.footerforms button{
+    border-radius: 30px;
+    padding: 10px;
+    background-color: rgb(63, 63, 235);
+    border: rgb(63, 63, 235);
+    color: white;
+    font-size: larger;
+}
+
+.footerforms > #email button{
+    width: 20%;
+}
+.footerforms > #phone button{
+    width: 20%;
+}
+.copyright{
+    display: grid;
+    grid-template-columns: 60% 35%;
+    grid-gap: 5%;
+}
+.copyright > #social{
+    display: flex;
+    justify-content: right;
+}
+
+.SiteFooterSocial__links a{
+    margin-right: 5px;
+    /* background-color: rgb(27, 26, 26); */
+}
+.Feedback{
+    right: 100px;
+    position: fixed;
+    z-index: 100;
+    background-color: white;
+    bottom: 0;
+    color: blue;
+    border: 1px solid blue;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 5px;
+    padding-bottom: 10px;
+    font-weight: 500;
+}

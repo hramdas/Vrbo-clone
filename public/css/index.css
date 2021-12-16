@@ -38,7 +38,6 @@ header div > span > button {
     height: 450px;
     /* display: block; */
 }
-
 .poster h1{
    color: ivory;
    font-size: 250%;
@@ -50,7 +49,7 @@ div > .search{
     padding: 20px;
     border-radius: 8px;
     position:sticky;
-    z-index: 50;
+    /* z-index: 50; */
     margin-top: 0;
 }
 .search form input{
@@ -222,8 +221,7 @@ form #submitbtn{
     margin: 0px 70px;
     height: 100%;
 }
-#spacesStyle > div{
-   
+#spacesStyle > div{ 
     display: grid;
     grid-template-columns: 24% 24% 24% 24%;
     grid-gap: 10px;
