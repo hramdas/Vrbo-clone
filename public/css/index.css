@@ -45,13 +45,13 @@ header div > span > button {
    -webkit-text-stroke: 0.5px rgb(0, 0, 0);
    text-shadow: 1px 1px #000000;
 }
-div.search{
+div > .search{
     background-color: rgb(238, 238, 238);
     padding: 20px;
     border-radius: 8px;
-    /* position: -webkit-sticky; */
-    /* position: sticky;
-    top: 0; */
+    position:sticky;
+    z-index: 50;
+    margin-top: 0;
 }
 .search form input{
     padding: 15px;
@@ -281,4 +281,75 @@ form #submitbtn{
 
 footer{
     margin: 0px 140px;
+}
+footer .footeMain{
+    display: grid;
+    grid-template-columns: 35% 45%;
+    grid-gap: 15%;
+}
+footer .footeMain > #footerLinks{
+    display: grid;
+    grid-template-columns: 48% 48%;
+    grid-gap: 2%;
+}
+
+.footerforms input{
+    padding: 10px;
+    width: 60%;
+    font-size: larger;
+}
+.footerforms > #email input{
+    width: 70%;
+}
+.footerforms > #phone select{
+    width: 20%;
+    padding: 10px;
+    font-size: larger;
+}
+
+.footerforms > #phone input{
+    width: 50%;
+}
+.footerforms button{
+    border-radius: 30px;
+    padding: 10px;
+    background-color: rgb(63, 63, 235);
+    border: rgb(63, 63, 235);
+    color: white;
+    font-size: larger;
+}
+
+.footerforms > #email button{
+    width: 20%;
+}
+.footerforms > #phone button{
+    width: 20%;
+}
+.copyright{
+    display: grid;
+    grid-template-columns: 60% 35%;
+    grid-gap: 5%;
+}
+.copyright > #social{
+    display: flex;
+    justify-content: right;
+}
+
+.SiteFooterSocial__links a{
+    margin-right: 5px;
+    /* background-color: rgb(27, 26, 26); */
+}
+.Feedback{
+    right: 100px;
+    position: fixed;
+    z-index: 100;
+    background-color: white;
+    bottom: 0;
+    color: blue;
+    border: 1px solid blue;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 5px;
+    padding-bottom: 10px;
+    font-weight: 500;
 }

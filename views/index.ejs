@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -23,8 +23,10 @@
                 <span>EN</span>
                 <span style="margin-top:0px ;"> <button>List your Property</button></span>
             </div>
-    </header>
-    
+    </header> -->
+
+    <%- include('header') %>
+
     <div class="poster" >
         <div id="bgclr">
             <div id="onPoster">
@@ -180,32 +182,16 @@
         </div>
     </div>
 <br>
-    <footer>
-        <div id="footerIcon">
-            <img src="https://csvcus.homeaway.com/rsrcs/cdn-logos/5.8.0/sitename/vrbo/web/logo.svg" alt="">
-        </div>
-
-        <div class="footeMain">
-            <div>
-                <div>
-                    <h3>Explore Vrbo</h3>
-                    <span>List your property</span> <br>
-                    <span>Book with Confidence</span><br>
-                    <span>Partner resources</span><br>
-                    <span>Vacation rental guides</span>
-                </div>
-            </div>
-            <div>
-
-            </div>
-        </div>
-    </footer>
-
+ <!-- Footer -->
+ <%- include('footer') %>
+ <script src="js/index.js"></script>
 </body>
 </html>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+
 <script>
+    
     $( function() {
 		$("#txtFromDate").datepicker({
 	        numberOfMonths: 1,
@@ -218,11 +204,12 @@
         
 	    $("#txtToDate").datepicker({ 
 	        numberOfMonths: 1,
-            minDate:0,
+         
 	        onSelect: function(selected) {
 	           $("#txtFromDate").datepicker("option","maxDate", selected)
 	        }
 	    });  
 	   
 	});
+
 </script>
