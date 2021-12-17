@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boking completed</title>
+</head>
+<style>
+    body{
+        margin: 10px 10%;
+        
+    }
+    .success{
+      
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .success img{
+        width: 100px;
+    }
+    .successInfo{
+        display: grid;
+       grid-template-columns: 30% 50%;
+        grid-gap: 10px;
+        margin: auto 20%;
+        border: 1px solid gray;
+    }
+    .successInfo img{
+        width: 200px;
+    }
+    #info{
+        text-decoration: none;
+        color: black;
+    }
+    #btn{
+        text-align: center;
+        float: right;
+        margin-right: 20%;
+        margin-top: 20px;
+    }
+    button{
+        padding: 10px 25px;
+        background-color: rgb(39, 39, 185);
+        color: white;
+        border-radius: 20px;
+        font-size: 18px;
+    }
+</style>
+<body>
+    
+    <div class="success" >
+        <img src="https://www.clipartmax.com/png/full/270-2707415_confirm-clip-art.png" alt="">
+        <div>
+            <h2>Booked successfully</h2>
+           
+            <p>Please check your email for more details</p>
+        </div>
+    </div>
+    <br>
+    <a id="info" href="/single/<%= space._id %>">
+        <div class="successInfo">
+            <img src=<%= space.images[0] %> alt="">
+            <h2><%= space.name %></h2>
+        </div>
+    </a>
+   
+    <a id="btn" href="/"><button>Go to Home</button></a>
+    
+</body>
+</html>

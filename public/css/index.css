@@ -3,6 +3,7 @@ body{
     margin: 0;
 }
 
+
 header{
     padding: 5px 10px;
     /* border: 1px solid black; */
@@ -218,7 +219,7 @@ form #submitbtn{
 }
 
 .spacesStyle{
-    margin: 0px 70px;
+    margin: 70px 0;
     height: 100%;
 }
 #spacesStyle > div{ 
@@ -226,7 +227,7 @@ form #submitbtn{
     grid-template-columns: 24% 24% 24% 24%;
     grid-gap: 10px;
 }
-#spacesStyle > div > div img{
+#spacesStyle > div > a img{
     width: 100%;
     /* height: 100%; */
     border-radius: 5px;

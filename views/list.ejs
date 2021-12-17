@@ -1,15 +1,15 @@
-<%- include('header', {title:"Vrbo", stylesheet:"css/list.css" }) %>
+<%- include('header', {title:"Vrbo", stylesheet:"/css/list.css" }) %>
 
     <div id="myHeader" class="topSticky">
         <%- include('headmenu') %>
         <div class="search" >
             <form action="">
-                <input id="destination" placeholder="Search destination or property ID" value="United States of America" type="text" required>
+                <input value=<%= place %> id="destination" placeholder="Search destination or property ID" value="United States of America" type="text" required>
                 <span class="dateSpan">
-                    <input placeholder="Check-in" id="txtFromDate" type="text" >
-                    <input placeholder="Check-out" id="txtToDate" type="text">
+                    <input value=<%= checkin %> placeholder="Check-in" id="txtFromDate" type="text" >
+                    <input value=<%= checkout %> placeholder="Check-out" id="txtToDate" type="text">
                 </span>
-                <input placeholder="Guests" id="guests" type="number">
+                <input value=<%= guests %> placeholder="Guests" id="guests" type="number">
                <input placeholder="Search" id="submitbtn" type="submit">
             </form>
         </div>
@@ -17,174 +17,32 @@
 
     <div class="mainContent" >
         <div>
-            <div class="singleItem">
-                <img src="https://media.vrbo.com/lodging/35000000/34010000/34003100/34003075/e32f4011.c6.jpg" alt="">
-                <div id="singleTxt">
-                    <div>
-                        <span>Condo</span>
-                        <br>
-                        <span id="itemTitle">Oceanfront with balcony, steps to the beach ! Sea Forever at Ocean Walk Condos</span>
-                        <br>
-                        <span>Sleeps 6</span>
+            <% spaces.forEach(space => { %> 
+                <a href="/single/<%= space._id %>">
+                    <div class="singleItem">
+                        <img src=<%= space.images[0] %>  alt="">
+                        <div id="singleTxt">
+                            <div>
+                                <span><%= space.type %> </span>
+                                <br>
+                                <span id="itemTitle"><%= space.name %> </span>
+                                <br>
+                                <span>Sleeps <%= space.bedroom %></span>
+                            </div>
+                            <div id="RatingPrice">
+                                <p>⭐<%= space.rating %></p>
+                                <span>
+                                    <span id="freeCncl">Free cancellation up to 60 days before check-in</span>
+                                    <br>
+                                    <span id="pricespan">₹<%= space.rate %> avg/night</span>
+                                </span>
+                            </div>
+                        </div>
                     </div>
-                    <div id="RatingPrice">
-                        <p>⭐3.0</p>
-                        <span>
-                            <span id="freeCncl">Free cancellation up to 60 days before check-in</span>
-                            <br>
-                            <span id="pricespan">₹11,153 avg/night</span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <hr style="width: 100%;">
-            <div class="singleItem">
-                <img src="https://media.vrbo.com/lodging/35000000/34010000/34003100/34003075/e32f4011.c6.jpg" alt="">
-                <div id="singleTxt">
-                    <div>
-                        <span>Condo</span>
-                        <br>
-                        <span id="itemTitle">Oceanfront with balcony, steps to the beach ! Sea Forever at Ocean Walk Condos</span>
-                        <br>
-                        <span>Sleeps 6</span>
-                    </div>
-                    <div id="RatingPrice">
-                        <p>⭐3.0</p>
-                        <span>
-                            <span id="freeCncl">Free cancellation up to 60 days before check-in</span>
-                            <br>
-                            <span id="pricespan">₹11,153 avg/night</span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <hr style="width: 100%;">
-            <div class="singleItem">
-                <img src="https://media.vrbo.com/lodging/35000000/34010000/34003100/34003075/e32f4011.c6.jpg" alt="">
-                <div id="singleTxt">
-                    <div>
-                        <span>Condo</span>
-                        <br>
-                        <span id="itemTitle">Oceanfront with balcony, steps to the beach ! Sea Forever at Ocean Walk Condos</span>
-                        <br>
-                        <span>Sleeps 6</span>
-                    </div>
-                    <div id="RatingPrice">
-                        <p>⭐3.0</p>
-                        <span>
-                            <span id="freeCncl">Free cancellation up to 60 days before check-in</span>
-                            <br>
-                            <span id="pricespan">₹11,153 avg/night</span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <hr style="width: 100%;">
-            <div class="singleItem">
-                <img src="https://media.vrbo.com/lodging/35000000/34010000/34003100/34003075/e32f4011.c6.jpg" alt="">
-                <div id="singleTxt">
-                    <div>
-                        <span>Condo</span>
-                        <br>
-                        <span id="itemTitle">Oceanfront with balcony, steps to the beach ! Sea Forever at Ocean Walk Condos</span>
-                        <br>
-                        <span>Sleeps 6</span>
-                    </div>
-                    <div id="RatingPrice">
-                        <p>⭐3.0</p>
-                        <span>
-                            <span id="freeCncl">Free cancellation up to 60 days before check-in</span>
-                            <br>
-                            <span id="pricespan">₹11,153 avg/night</span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <hr style="width: 100%;">
-            <div class="singleItem">
-                <img src="https://media.vrbo.com/lodging/35000000/34010000/34003100/34003075/e32f4011.c6.jpg" alt="">
-                <div id="singleTxt">
-                    <div>
-                        <span>Condo</span>
-                        <br>
-                        <span id="itemTitle">Oceanfront with balcony, steps to the beach ! Sea Forever at Ocean Walk Condos</span>
-                        <br>
-                        <span>Sleeps 6</span>
-                    </div>
-                    <div id="RatingPrice">
-                        <p>⭐3.0</p>
-                        <span>
-                            <span id="freeCncl">Free cancellation up to 60 days before check-in</span>
-                            <br>
-                            <span id="pricespan">₹11,153 avg/night</span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <hr style="width: 100%;">
-            <div class="singleItem">
-                <img src="https://media.vrbo.com/lodging/35000000/34010000/34003100/34003075/e32f4011.c6.jpg" alt="">
-                <div id="singleTxt">
-                    <div>
-                        <span>Condo</span>
-                        <br>
-                        <span id="itemTitle">Oceanfront with balcony, steps to the beach ! Sea Forever at Ocean Walk Condos</span>
-                        <br>
-                        <span>Sleeps 6</span>
-                    </div>
-                    <div id="RatingPrice">
-                        <p>⭐3.0</p>
-                        <span>
-                            <span id="freeCncl">Free cancellation up to 60 days before check-in</span>
-                            <br>
-                            <span id="pricespan">₹11,153 avg/night</span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <hr style="width: 100%;">
-            <div class="singleItem">
-                <img src="https://media.vrbo.com/lodging/35000000/34010000/34003100/34003075/e32f4011.c6.jpg" alt="">
-                <div id="singleTxt">
-                    <div>
-                        <span>Condo</span>
-                        <br>
-                        <span id="itemTitle">Oceanfront with balcony, steps to the beach ! Sea Forever at Ocean Walk Condos</span>
-                        <br>
-                        <span>Sleeps 6</span>
-                    </div>
-                    <div id="RatingPrice">
-                        <p>⭐3.0</p>
-                        <span>
-                            <span id="freeCncl">Free cancellation up to 60 days before check-in</span>
-                            <br>
-                            <span id="pricespan">₹11,153 avg/night</span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <hr style="width: 100%;">
-            <div class="singleItem">
-                <img src="https://media.vrbo.com/lodging/35000000/34010000/34003100/34003075/e32f4011.c6.jpg" alt="">
-                <div id="singleTxt">
-                    <div>
-                        <span>Condo</span>
-                        <br>
-                        <span id="itemTitle">Oceanfront with balcony, steps to the beach ! Sea Forever at Ocean Walk Condos</span>
-                        <br>
-                        <span>Sleeps 6</span>
-                    </div>
-                    <div id="RatingPrice">
-                        <p>⭐3.0</p>
-                        <span>
-                            <span id="freeCncl">Free cancellation up to 60 days before check-in</span>
-                            <br>
-                            <span id="pricespan">₹11,153 avg/night</span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <hr style="width: 100%;">
+                </a>
+                <hr style="width: 100%;">
+            <% }) %> 
+
             <%- include('footer') %>
         </div>
         <div id="MapImg">

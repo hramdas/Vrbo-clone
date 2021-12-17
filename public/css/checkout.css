@@ -34,21 +34,44 @@ header {
     margin: 10px 0;
     padding: 25px;
 }
-.checkoutBody span{
-    font-size: 29px;
-    font-weight: 600;
-}
 .checkoutBody{
     margin: 20px 200px;
 }
-.checkoutLeft > div span > input{
+.checkoutLeft > #formDiv > form > input{
     width: 200px;
     padding: 15px;
 }
-.checkoutLeft button{
+.checkoutLeft #formbtn{
     padding: 15px 50px;
     background-color: rgb(47, 47, 211);
     color: white;
     border-radius: 25px;
    margin-left:50%;
+}
+
+.checkoutRight{
+    background-color: white;
+    padding: 20px;
+    border-radius: 7px;
+}
+.checkoutRight #checkdate > span{
+    font-size: medium;
+    border: 1px solid black;
+    padding: 10px;
+}
+.checkoutRight #checkdate{
+    display: grid;
+    grid-template-columns: 30% 30%;
+   /* margin-left: 20%; */
+   /* border: 1px solid black; */
+   padding: 10px;
+}
+.checkoutRight img{
+    width: 80%;
+}
+#checkPrice{
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 5px;
+    width: 300px;
 }

@@ -10,15 +10,15 @@
                     <span>Find the perfect vacation rental</span>
                 </h1>
                 <div class="search" >
-                    <form action="">
-                        <input id="destination" placeholder="Search destination or property ID" type="text" required>
+                    <form action="list">
+                        <input name="place" id="destination" placeholder="Search destination or property ID" type="text" required>
                         <span class="dateSpan">
                             
-                            <input placeholder="Check-in" id="txtFromDate" type="text" >
-                            <input placeholder="Check-out" id="txtToDate" type="text">
+                            <input name="in" placeholder="Check-in" id="txtFromDate" type="text" >
+                            <input name="out" placeholder="Check-out" id="txtToDate" type="text">
                         </span>
-                        <input placeholder="Guests" id="guests" type="number">
-                       <input placeholder="Search" id="submitbtn" type="submit">
+                        <input name="guests" placeholder="Guests" id="guests" type="number">
+                       <input id="submitbtn" type="submit">
                     </form>
                 </div>
             </div>
@@ -29,60 +29,61 @@
             <h2>Get inspired for a family trip</h2>
             <p>Book homes with space, convenience and amenities</p>
             <div id="allCat1">
-                <div class="allCat1" id="imgtxt">
+                <!-- <a href=""></a> -->
+                    <a href="list/?q=beach" class="allCat1" id="imgtxt">
                     
-                    <span>
-                        <p>Pets welcome</p>
-                    </span>
-                </div>
+                        <span>
+                            <p>On the beach</p>
+                        </span>
+                    </a>
                 
                 <div id="grid4" >
-                    <div id="imgtxt1">
+                    <a href="list/?q=pets" id="imgtxt1">
                         <span>
                             <p>Pets welcome</p>
                         </span>
-                    </div>
-                    <div id="imgtxt2">
+                    </a>
+                    <a href="list/?q=pool" id="imgtxt2">
                         <span>
                             <p>Swimming pools</p>
                         </span>
-                    </div>
-                    <div id="imgtxt3">
+                    </a>
+                    <a href="list/?q=beach" id="imgtxt3">
                         <span>
                             <p>Homes with free cancellation</p>
                         </span>
-                    </div>
-                    <div id="imgtxt4">
+                    </a>
+                    <a href="list/?q=beach" id="imgtxt4">
                         <span>
                             <p>More than 3 bedrooms</p>
                         </span>
-                    </div>
+                    </a>
                 </div>
             </div>
             <br>
            
             <div id="allCat1">
                 <div id="grid4" >
-                    <div id="imgtxt5">
+                    <a href="list/?q=outdooe" id="imgtxt5">
                         <span>
                             <p>Outdoor space</p>
                         </span>
-                    </div>
-                    <div id="imgtxt6">
+                    </a>
+                    <a href="list/" id="imgtxt6">
                         <span>
                             <p>On the water</p>
                         </span>
-                    </div>
-                    <div id="imgtxt7">
+                    </a>
+                    <a href="list" id="imgtxt7">
                         <span>
                             <p>Hot tubs</p>
                         </span>
-                    </div>
-                    <div id="imgtxt8">
+                    </a>
+                    <a href="list/?q=beach" id="imgtxt8">
                         <span>
                             <p>Near mountains</p>
                         </span>
-                    </div>
+                    </a>
                 </div>
                 <div class="allCat2" id="imgtxt">
                     <span>

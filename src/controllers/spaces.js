@@ -7,10 +7,10 @@ router.get('', async (req, res)=>{
     return res.status(200).send(spaces)
 })
 
-// router.get('/single', async (req, res)=>{
-//     const spaces = await Spaces.find().lean().exec()
-//     res.status(200).send(spaces)
-// })
+router.get('/single/:id', async (req, res)=>{
+    const spaces = await Spaces.findById(req.params.id).lean().exec()
+    res.status(200).send(spaces)
+})
 
 router.post('', async (req, res)=>{
     const space = await Spaces.create(req.body)
