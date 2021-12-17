@@ -1,10 +1,14 @@
 body{
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin: 0;
+    background-color: rgb(241, 241, 241);
 }
 
 header{
-    padding: 5px 20px;
+    padding: 10px 15px;
+    margin: 10px 20px;
+}
+header span{
+    margin-top: 10px;
 
 }
 header .icon{
@@ -18,4 +22,33 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+.checkGrid{
+    display: grid;
+    grid-template-columns: 55% 40%;
+    grid-gap: 5%;
+}
+.checkoutLeft > div{
+    background-color: white;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 25px;
+}
+.checkoutBody span{
+    font-size: 29px;
+    font-weight: 600;
+}
+.checkoutBody{
+    margin: 20px 200px;
+}
+.checkoutLeft > div span > input{
+    width: 200px;
+    padding: 15px;
+}
+.checkoutLeft button{
+    padding: 15px 50px;
+    background-color: rgb(47, 47, 211);
+    color: white;
+    border-radius: 25px;
+   margin-left:50%;
 }

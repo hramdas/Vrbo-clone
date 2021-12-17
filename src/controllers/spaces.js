@@ -1,12 +1,12 @@
-const exprss = require('express')
-const { model } = require('mongoose')
-const router = exprss.Router()
+const express = require('express')
 const Spaces = require('../models/spaces')
+const router = express.Router()
 
 router.get('', async (req, res)=>{
     const spaces = await Spaces.find().lean().exec()
-    res.status(200).send(spaces)
+    return res.status(200).send(spaces)
 })
+
 // router.get('/single', async (req, res)=>{
 //     const spaces = await Spaces.find().lean().exec()
 //     res.status(200).send(spaces)
@@ -17,4 +17,4 @@ router.post('', async (req, res)=>{
     res.status(201).send(space)
 })
 
-model.exports = router
+module.exports = router
