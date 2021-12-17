@@ -5,7 +5,7 @@ app.use(express.json())
 app.set("view engine" , "ejs")
 app.use(express.static("public"))
 
-const Spaces = require('../models/spaces')
+const Spaces = require('./models/spaces')
 
 app.get('/', (req, res)=>{
    return res.render('index.ejs', {})
@@ -15,9 +15,9 @@ app.get('/list', (req, res)=>{
    return res.render('list.ejs', {})
 })
 
-app.get('/single/:id', async (req, res)=>{
-    const space = await Spaces.findById(req.params.id)
-   return res.render('single.ejs', {space})
+app.get('/single/', async (req, res)=>{
+   //  const space = await Spaces.find()
+   return res.render('single.ejs', {})
 })
 
 app.listen('2000', async ()=>{
