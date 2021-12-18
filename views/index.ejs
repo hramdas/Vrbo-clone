@@ -61,8 +61,8 @@
                 </div>
             </div>
             <br>
-           
-            <div id="allCat1">
+           <!-- <button onclick="hideDiv()">view more ideas</button> -->
+            <div class="hidediv" id="allCat1">
                 <div id="grid4" >
                     <a href="list/?q=outdooe" id="imgtxt5">
                         <span>
@@ -186,5 +186,15 @@
 	    });  
 	   
 	});
+
+    function hideDiv(){
+        var x = document.getElementsByClassName("hidediv");
+        console.log(55)
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
 
 </script>
